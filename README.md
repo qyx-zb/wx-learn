@@ -197,7 +197,7 @@ this.setData({
 2. 小程序的[开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)，下载小程序的开发者工具
 
 #### 小程序目录结构
-![image](http://note.youdao.com/yws/res/7861/4593B98CCF654F32BDF3E2E6F58336EA)
+![image](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/10.png)
 
 **一个完整的小程序主要由以下几部分组成：**  
 - 一个入口文件：app.js
@@ -208,19 +208,19 @@ this.setData({
     - 逻辑：js，json（页面配置，不是必须）
     
 注：在app.json中可以配置页面，列表的第一个页面便是首页，在pages中也可以引用组建，需要在json文件中配置对应的页面地址,如下图
-![image](http://note.youdao.com/yws/res/7881/84D791222B7F49259124AC450CD697DE)
+![image](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/11.png)
 
 #### 小程序的开发调试和打包上线
 - 开发者工具有一个调试器功能，使用之后和普通的web页面无异。
-![image](http://note.youdao.com/yws/res/7887/C76B640619AE457C8C61A74B129F4DDD)
+![image](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/12.png)
 - 开发者工具有一个预览功能，点击可以生成一个二维码，通过微信扫码预览，记得打开调试：
-![image](http://note.youdao.com/yws/res/7896/96FE5E043E064628A649F52E07ADA95C)
+![image](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/13.png)
 测试预览的时候，给相关的测试人员添加体验权限，将我们本地的代码上传到管理平台，就可以获得永久的体验码，开发码的有效时间是半个小时。  
 - 发布的时候将不检验合法域名去掉，并在服务器中配置域名
-![image](http://note.youdao.com/yws/res/7905/C5C0FC5F1E5F4E9D80E72CD755F5457D)
-![image](http://note.youdao.com/yws/res/7907/7E873D6B5A67427AA8DC37FB399AEE5E)
+![image](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/14.png)
+![image](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/15.png)
 - 提交审核，审核通过之后一键发布即可
-![image](http://note.youdao.com/yws/res/7910/61233F3936334F70990F82DAD04EC160)
+![image](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/16.png)
 
 到这里我们小程序的一个基本开发流程就结束了。
 
@@ -230,7 +230,7 @@ this.setData({
 
 参考一张微信官方提供的登录流程图辅助理解：
 ![](https://res.wx.qq.com/wxdoc/dist/assets/img/api-login.2fcc9f35.jpg)
-![image.png](http://note.youdao.com/yws/res/8097/WEBRESOURCEb130fbd41bb8fd0a480ebda9554a47d5)
+![image.png](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/1.png)
 
 由上图可知,首先通过wx.login获取登录code(登录校验码)，然后请求接口将code发送到开发者服务器，凭借用户的Appid和code从微信服务器获取session_key(本次会话密钥)和openid，在本地服务器根据这两个信息定义用户的登录状态,并且将用户的登录状态返回到界面,这就是一次完整的用户授权过程。
 
@@ -288,14 +288,14 @@ phoneNumber    手机号
 
 ### 自定义头部导航navigationStyle
 效果图：
-![image.png](http://note.youdao.com/yws/res/8169/WEBRESOURCEb8b66b08293ab449bc2c98efc8d6b30b)
+![image.png](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/2.png)
 
 代码实现：
 注意点：
 - getCurrentPages（）获取当前页面栈。数组中第一个元素为首页，最后一个元素为当前页面。
 
 我们可以把这个功能写成一个组件：
-![image.png](http://note.youdao.com/yws/res/8173/WEBRESOURCEd0b74846d7e5753de30fc3fd305d2653)
+![image.png](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/3.png)
 ```
 //custom-title.js
 
@@ -550,8 +550,8 @@ data:{
 "navigationStyle":"custom"
 ```
 ### canvas，video等原生组件
-![image.png](http://note.youdao.com/yws/res/8064/WEBRESOURCEb2c68179eb79a94d0321b1490edbd11b)
-![image.png](http://note.youdao.com/yws/res/8201/WEBRESOURCE7346d98c1c75e0aa3475c01da575715f)
+![image.png](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/4.png)
+![image.png](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/5.png)
 
 当时在这里遇到很多问题，等我以后慢慢回想起来补充，这里主要想说一个原生组件的问题。
 
@@ -560,9 +560,9 @@ data:{
 ### IM&分享功能
 通过设置button组件的open-type,IM功能的话需要在公众平台配置接口
 ### 双边滑动的一个slider组建（代码之后整理补齐）
-![image.png](http://note.youdao.com/yws/res/8077/WEBRESOURCEe730a28fc0c7c1e44e69ec881453202a)
+![image.png](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/6.png)
 ### 列表的一个删除效果（代码之后整理补齐）
-![image.png](http://note.youdao.com/yws/res/8074/WEBRESOURCE64f2b19523a6b920fe053857da43e3cc)
+![image.png](https://raw.githubusercontent.com/qyx-zb/wx-learn/master/7.png)
 
 
 
